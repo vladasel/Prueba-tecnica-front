@@ -59,9 +59,6 @@
               <label for="username" class="form-label">Usename</label>
               <input type="text" class="form-control" name="username" aria-describedby="username"
                 required >
-              <div class="alert alert-danger" role="alert" *ngIf="f.submitted">
-                Username is required!
-              </div>
             </div>
           </div>
 
@@ -82,7 +79,7 @@
             Loggin failed :{{errorMessage}}
           </div>
 
-          <div class="alert alert-succes" *ngIf="isLoggedIn">
+          <div class="alert alert-succes" *ngIf="f.submitted">
             Logget in.
           </div>
         </form>
