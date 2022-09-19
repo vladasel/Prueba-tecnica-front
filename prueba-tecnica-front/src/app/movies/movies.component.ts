@@ -8,6 +8,7 @@ import { MovieService } from '../_services/movie.service';
 })
 export class MoviesComponent implements OnInit {
   movies: any = null;
+  // page: number = 4;
 
   constructor(private serviceM: MovieService) { }
 
@@ -24,6 +25,19 @@ export class MoviesComponent implements OnInit {
 
         });
   }
+
+  /** next() {
+      this.page++
+      this.seeMovies();
+    }
+
+    previous() {
+      if (this.page > 0) {
+        this.page--
+      }
+      this.seeMovies();
+
+    } */
 
 
 
