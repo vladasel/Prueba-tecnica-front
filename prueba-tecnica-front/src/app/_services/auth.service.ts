@@ -11,18 +11,10 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
 
-  user: any = null;
 
-  login(email: string, password: string): Observable<any> {
 
-    this.user = null;
-
-    this.user = {
-      "username": email,
-      "password": password
-    };
-    console.log(JSON.stringify(this.user));
-    return this.http.post(AUTH_API +API_KEY, JSON.stringify(this.user), { headers: { 'Content-Type': 'application/json' } });
+  login(): Observable<any> {
+    return this.http.get(AUTH_API +API_KEY);
   }
 
 
