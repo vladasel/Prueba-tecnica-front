@@ -15,7 +15,8 @@ HOME
 
 LOG IN
 
-![image](https://user-images.githubusercontent.com/108732298/191005656-a667770b-b43e-4a3c-b4ea-8d826019f1c5.png)
+![image](https://user-images.githubusercontent.com/108732298/191016075-7f984ce4-de75-47fd-b22c-e473afe9d2a5.png)
+
 
 MOVIES
 
