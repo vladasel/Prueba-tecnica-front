@@ -18,8 +18,7 @@ export class AppComponent {
   errorMessage = '';
 
   isLoggedIn = false;
-  showAdminBoard = false;
-  showModeratorBoard = false;
+  showUserBoard = false;
   usernameView?: string;
 
   form: any = {
@@ -51,7 +50,7 @@ export class AppComponent {
 
   onSubmit(): void {
 
-    this.authService.login(this.form.username, this.form.password).subscribe(
+    this.authService.login().subscribe(
       data => {
         this.usernameView = this.form.username;
         this.isLoggedInView = true;
