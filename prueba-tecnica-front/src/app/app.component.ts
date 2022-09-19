@@ -50,7 +50,7 @@ export class AppComponent {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
 
-        window.location.reload();
+
 
 
       },
