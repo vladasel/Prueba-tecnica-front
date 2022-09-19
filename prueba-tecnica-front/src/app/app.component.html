@@ -58,8 +58,8 @@
             <div class="mb-3">
               <label for="username" class="form-label">Usename</label>
               <input type="text" class="form-control" name="username" aria-describedby="username"
-                [(ngModel)]="form.username" required #username="ngModel">
-              <div class="alert alert-danger" role="alert" *ngIf="username.errors && f.submitted">
+                required >
+              <div class="alert alert-danger" role="alert" *ngIf="f.submitted">
                 Username is required!
               </div>
             </div>
@@ -68,12 +68,9 @@
           <div class="form-group">
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required
-                minlength="4" #password="ngModel" />
-              <div class="alert alert-danger" role="alert" *ngIf="password.errors && f.submitted">
-                <div *ngIf="password.errors['required']">Password is required!</div>
-                <div *ngIf="password.errors['minlenght']"> Password must be al least 4 characters!</div>
-              </div>
+              <input type="password" class="form-control" name="password" required
+                minlength="4"  />
+
             </div>
           </div>
 

@@ -10,6 +10,7 @@ import { AuthInterceptor } from './_helpers/auth.interceptor';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [
     AppComponent,

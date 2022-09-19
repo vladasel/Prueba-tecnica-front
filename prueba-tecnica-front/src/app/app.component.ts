@@ -21,22 +21,14 @@ export class AppComponent {
   showUserBoard = false;
   usernameView?: string;
 
-  form: any = {
-    username: null,
-    password: null
-  };
+
 
   constructor(private tokenStorageService: TokenStorageService, private authService: AuthService, public router: Router) { }
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();
     if (this.isLoggedIn) {
-      const user = this.tokenStorageService.getUser();
       const token = this.tokenStorageService.getToken();
-      this.usernameView = JSON.stringify(user).replace(/['"]+/g, ''); // faig un regex per treure-li les cometes
-
-
-
     }
   }
 
@@ -52,17 +44,8 @@ export class AppComponent {
 
     this.authService.login().subscribe(
       data => {
-        this.usernameView = this.form.username;
         this.isLoggedInView = true;
-
         this.tokenStorageService.saveToken(data["token"]);
-        this.tokenStorageService.saveUser(this.form.username);
-        console.log(this.tokenStorageService.saveUser(this.form.username));
-
-
-
-        this.usernameView = this.form.username;
-
 
         this.isLoginFailed = false;
         this.isLoggedIn = true;
