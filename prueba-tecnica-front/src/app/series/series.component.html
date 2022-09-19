@@ -1,11 +1,24 @@
 <div class="container">
-  <br><br>
-  <div class="card">
-    <br>
-    <div class="card-title"><h1>Series</h1></div>
-    <div class="card-body">
+  <br><br><br>
+  <h1>SERIES</h1>
+  <br><br><br>
+  <div class="row row-cols-1 row-cols-md-4 g-4" *ngIf="series!=null else espera">
+    <div class="col" *ngFor="let s of series.results">
+      <div class="card">
+        <img src="https://image.tmdb.org/t/p/w220_and_h330_face{{s.poster_path}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{s.original_name}}</h5>
+          <br>
+          <div class="d-grid gap-2 col-10 mx-auto">
+            <button routerLink="/moreS/{{s.id}}" class="btn btn-warning " type="button"> See
+              more</button>
 
+          </div>
+
+        </div>
+      </div>
     </div>
-    <br>
   </div>
+
 </div>
+<ng-template #espera> No hay datos que mostrar por ahora....</ng-template>

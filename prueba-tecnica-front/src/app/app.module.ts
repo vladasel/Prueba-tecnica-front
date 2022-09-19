@@ -12,6 +12,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { RouterModule } from '@angular/router';
 import { SeeMoreComponent } from './see-more/see-more.component';
+import { MoreSComponent } from './more-s/more-s.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import { SeeMoreComponent } from './see-more/see-more.component';
     MoviesComponent,
     SeriesComponent,
     AboutComponent,
-    SeeMoreComponent
+    SeeMoreComponent,
+    MoreSComponent
   ],
   imports: [
     BrowserModule,

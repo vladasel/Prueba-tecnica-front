@@ -2,7 +2,7 @@
   <br><br><br>
   <h1>MOVIES</h1>
   <br><br><br>
-  <div class="row row-cols-1 row-cols-md-4 g-4" *ngIf="movies.results!=null else espera">
+  <div class="row row-cols-1 row-cols-md-4 g-4" *ngIf="movies!=null else espera">
     <div class="col" *ngFor="let m of movies.results">
       <div class="card">
         <img src="https://image.tmdb.org/t/p/w220_and_h330_face{{m.poster_path}}" class="card-img-top" alt="...">
