@@ -18,4 +18,8 @@ export class MovieService {
     return this.http.get<any[]>(url+"popular?"+api_key+ "&language=es-ES");
 
   }
+
+  getMovie(id: any): Observable<Movies> {
+    return this.http.get<Movies>(url + id + "?" + api_key + "&language=es-ES")
+  }
 }

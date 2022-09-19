@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
+import { SeeMoreComponent } from './see-more/see-more.component';
 import { SeriesComponent } from './series/series.component';
 
 const routes: Routes = [
@@ -27,6 +28,11 @@ const routes: Routes = [
   {
     path: "series",
     component: SeriesComponent
+
+  },
+  {
+    path: "more/:id",
+    component: SeeMoreComponent
 
   },
 ];

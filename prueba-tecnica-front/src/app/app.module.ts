@@ -11,13 +11,15 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { RouterModule } from '@angular/router';
+import { SeeMoreComponent } from './see-more/see-more.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     MoviesComponent,
     SeriesComponent,
-    AboutComponent
+    AboutComponent,
+    SeeMoreComponent
   ],
   imports: [
     BrowserModule,
